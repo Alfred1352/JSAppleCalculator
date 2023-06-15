@@ -9,23 +9,25 @@ function appendNumber(number) {
 function setOperator(opButton) {
   let display = document.getElementById('display');
   displayValue = parseFloat(display.value);
-  operator = opButton.value;
-  display.value = display.value;
+  operator = opButton;
+  display.value = '';
 
-  let operatorButtons = document.getElementsByClassName('operator');
-  for (let i = 0; i < operatorButtons.length; i++) {
-    operatorButtons[i].classList.remove('active');
-  }
+  // let operatorButtons = document.getElementsByClassName('operator');
+  // for (let i = 0; i < operatorButtons.length; i++) {
+  //   operatorButtons[i].classList.remove('active');
+  // }
 
-  opButton.classList.add('active');
+  //operator = opButton.value;
 
-  if (operator.toLowerCase() === 'x') {
+  if (opButton === 'x') {
     operator = '*';
-  } else if (operator.toLowerCase() === '÷') {
+  } else if (opButton === '÷') {
     operator = '/';
   } else {
-    operator = opButton.value;
+    operator = opButton
   }
+  display.value = '';
+  //opButton.classList.add('active');
 }
 
 function calculate() {
@@ -45,6 +47,7 @@ function calculate() {
   }
 
   display.value = result;
+  displayValue = result;
 }
 
 function clearAll() {

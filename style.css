@@ -69,5 +69,7 @@ form input.number {
 }
 
 .operator.active {
-  background-color: #e6e6e6;
+  background-color: #d8d3d3;
+  color: #e5923e;
+  font-weight: bolder;
 }
