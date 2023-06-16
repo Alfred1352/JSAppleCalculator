@@ -58,6 +58,11 @@ form input.operator {
   background-color: #e5923e;
 }
 
+form input.switch {
+  color: whitesmoke;
+  background-color: red;
+}
+
 form input.other {
   color: black;
   background-color: rgb(199, 198, 198);
@@ -72,4 +77,16 @@ form input.number {
   background-color: #d8d3d3;
   color: #e5923e;
   font-weight: bolder;
+}
+
+.scientific-calculator {
+  display: none; 
+}
+
+.normal-mode .normal-calculator {
+  display: block;
+}
+
+.scientific-mode .scientific-calculator {
+  display: block;
 }

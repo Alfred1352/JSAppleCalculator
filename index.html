@@ -8,41 +8,76 @@
   <body>
     <div class="container">
       <div class="calculator">
-        <form>
-          <div class="display">
-            <input type="text" name="display" id="display">
-          </div>
-          <div>
-            <input type="button" value="AC" onclick="clearAll()" id="clearButton" class="other">
-            <input type="button" value="+/-" onclick="toggleSign()" class="other">
-            <input type="button" value="%" onclick="calculatePercentage()" class="other">
-            <input type="button" value="÷" onclick="setOperator('/')" class="operator">
-          </div>
-          <div>
-            <input type="button" value="7" onclick="appendNumber(7)" class="number">
-            <input type="button" value="8" onclick="appendNumber(8)" class="number">
-            <input type="button" value="9" onclick="appendNumber(9)" class="number">
-            <input type="button" value="x" onclick="setOperator('*')" class="operator">
-          </div>
-          <div>
-            <input type="button" value="4" onclick="appendNumber(4)" class="number">
-            <input type="button" value="5" onclick="appendNumber(5)" class="number">
-            <input type="button" value="6" onclick="appendNumber(6)" class="number">
-            <input type="button" value="-" onclick="setOperator('-')" class="operator">
-          </div>
-          <div>
-            <input type="button" value="1" onclick="appendNumber(1)" class="number">
-            <input type="button" value="2" onclick="appendNumber(2)" class="number">
-            <input type="button" value="3" onclick="appendNumber(3)" class="number">
-            <input type="button" value="+" onclick="setOperator('+')" class="operator">
-          </div>
-          <div>
-            <input type="button" value="0" onclick="appendNumber(0)" class="zero">
-            <input type="button" value="." onclick="display.value += '.' " class="number">
-            <input type="button" value="=" class="operator" onclick="calculate()" id="equalButton">
-          </div>
-        </form>
+        <div class="normal-calculator">
+          <form>
+            <div class="display">
+              <input type="text" name="display" id="display">
+            </div>
+            <div>
+              <input type="button" value="AC" onclick="clearAll()" id="clearButton" class="other">
+              <input type="button" value="+/-" onclick="toggleSign()" class="other">
+              <input type="button" value="%" onclick="calculatePercentage()" class="other">
+              <input type="button" value="÷" onclick="setOperator('/')" class="operator">
+            </div>
+            <div>
+              <input type="button" value="7" onclick="appendNumber(7)" class="number">
+              <input type="button" value="8" onclick="appendNumber(8)" class="number">
+              <input type="button" value="9" onclick="appendNumber(9)" class="number">
+              <input type="button" value="x" onclick="setOperator('*')" class="operator">
+            </div>
+            <div>
+              <input type="button" value="4" onclick="appendNumber(4)" class="number">
+              <input type="button" value="5" onclick="appendNumber(5)" class="number">
+              <input type="button" value="6" onclick="appendNumber(6)" class="number">
+              <input type="button" value="-" onclick="setOperator('-')" class="operator">
+            </div>
+            <div>
+              <input type="button" value="1" onclick="appendNumber(1)" class="number">
+              <input type="button" value="2" onclick="appendNumber(2)" class="number">
+              <input type="button" value="3" onclick="appendNumber(3)" class="number">
+              <input type="button" value="+" onclick="setOperator('+')" class="operator">
+            </div>
+            <div>
+              <input type="button" value="0" onclick="appendNumber(0)" class="number">
+              <input type="button" value="." onclick="display.value += '.' " class="number">
+              <input type="button" value="S" onclick="toggleMode()" id="mode-switch" class="switch">
+              <input type="button" value="=" class="operator" onclick="calculate()" id="equalButton">
+            </div>
+          </form>
+        </div>
+        <div class="scientific-calculator">
+          <form>
+            <div class="display">
+              <input type="text" name="display" id="scientific-display">
+            </div>
+            <div>
+              <input type="button" value="(" id="left-parathesis" class="other">
+              <input type="button" value=")" id="right-parathesis" class="other">
+              <input type="button" value="mc" id="mc" class="other">
+              <input type="button" value="m+" id="m+" class="other">
+              <input type="button" value="m-" id="m-" class="other">
+              <input type="button" value="mr" id="mr" class="other">
+              <input type="button" value="AC" onclick="clearAll()" id="clearButton" class="other">
+              <input type="button" value="+/-" onclick="toggleSign()" class="other">
+              <input type="button" value="%" onclick="calculatePercentage()" class="other">
+              <input type="button" value="÷" onclick="setOperator('/')" class="operator">
+            </div>
+            <div>
+              <input type="button" value="2nd" id="second" class="other">
+              <input type="button" value="x&sup2" id="second" class="other">
+              <input type="button" value="x&sup3" id="second" class="other">
+              <input type="button" value="xy" id="second" class="other">
+              <input type="button" value="ex" id="second" class="other">
+              <input type="button" value="10x" id="second" class="other">
+              <input type="button" value="7" onclick="appendNumber(7)" class="number">
+              <input type="button" value="8" onclick="appendNumber(8)" class="number">
+              <input type="button" value="9" onclick="appendNumber(9)" class="number">
+              <input type="button" value="x" onclick="setOperator('*')" class="operator">
+            </div>
+          </form>
+        </div>
       </div>
+      <button id="mode-switch" onclick="toggleMode()">Switch</button>
     </div>
   </body>
   <script src="index.js"></script>
